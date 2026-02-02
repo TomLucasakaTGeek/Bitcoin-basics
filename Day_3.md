@@ -1,8 +1,10 @@
-# Consensus Algorithm of Bitcoin: Proof-of-Work[POW]
-- Bitcoin operates on a concept of Consensus Algorithm, an algorithm where the nodes agree to a state of blockchain.
-- Proof-of-Work involves solving complex computational algorithm to validate transactions happening on Bitcoin.
-- In PoW, me aim to find a number as - "Nonce->Hash" less than or equal to a target hash value, involving alot of processing or "mining".
-- For Mining, the miners are awarded with the the transaction fees + some bitcoins. Every 4 years, the bitcoin reward is halved.
-- Each block of Bitcoin comprises of a Nonce, Target and a Merkel Tree, alongside Cryptographic Hash and Transaction Records.
-- Merkel Tree is a Binary Tree of transactions where leaf nodes represents a transaction and a hash pointer of a pair of these nodes makes up the parent nodes.
-- This process goes until we have only one node left called Merkle Root, a Hash of all the transactions and any mismatch of transactions causes elimination of that false transaction. 
+# Data Structures: The Chain in Blockchain
+- The Block Header: Examining the six components (Version, Prev Hash, Merkle Root, Time, Bits, Nonce) that define a block's identity.
+
+- Merkle Trees: A mathematical structure that hashes all transactions in a block into a single "root," allowing nodes to verify a single transaction without downloading the whole block.
+
+- Chaining Blocks: How each block contains the hash of the previous one, creating a "chain" that makes altering past data computationally impossible.
+
+- The Genesis Block: Analyzing "Block 0" and the message Satoshi embedded in it regarding bank bailouts.
+
+- Block Body: Understanding how transactions are ordered and stored within the 1MB–4MB effective limit.
